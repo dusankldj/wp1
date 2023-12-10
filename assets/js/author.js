@@ -1,3 +1,4 @@
+//Dinamicko ispisivanje elemenata u navigacionom meniju
 let nizImena=['Home','About','Brand','Contact Us','Author'];
 let nizPutanja=['index.html','about.html','brand.html','contact.html','author.html'];
 
@@ -15,7 +16,7 @@ for(let i=0;i<nizIkonicaNavPutanja.length;i++)
     navContentIkonice+=`<li><img src="${nizIkonicaNavPutanja[i]}" alt="${nizIkonicaNavAlt[i]}">${nizIkonicaNavText[i]}</li>`;
 document.getElementById("navIkonice").innerHTML=navContentIkonice;
 
-
+//Dinamicko ispisivanje elemanata u futeru
 let futerIkonice=[
     {imeIkonice:"facebook-f", link:"https://www.facebook.com/login/"},
     {imeIkonice:"twitter", link:"https://twitter.com/i/flow/login"},
@@ -26,14 +27,14 @@ for(let i=0;i<3;i++){
     ikoniceFuter+=`<li><a href="${futerIkonice[i].link}" target="_blank"><i class="fa fa-${futerIkonice[i].imeIkonice}"></i></a></li>`;
 }
 $("#futerIkonice").append(ikoniceFuter);
-//document.getElementById("#futerIkonice").innerHTML=ikoniceFuter;
+
 
 let navFuter=[
     {tekst:"Home", link:"index.html"},
-    {tekst:"About", link:"#top"},
+    {tekst:"About", link:"author.html"},
     {tekst:"Brand", link:"brand.html"},
     {tekst:"Contact us", link:"contact.html"},
-    {tekst:"Author", link:"author.html"}
+    {tekst:"Author", link:"#top"}
 ];
 let navigacijaFuter="";
 for(let i=0;i<5;i++){
