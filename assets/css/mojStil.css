@@ -34,14 +34,14 @@
   #readMore:hover::before {
     width: 100%;
   }*/
-#readMore{
+#readMore,#closeLicence{
     background-color: rgb(255,0,0);
     color:#FFFF;
     transition: background-color 0.5s ease,  0.5s ease;
     border:none;
     font-family: poppins;
 }
-#readMore:hover{
+#readMore:hover,#closeLicence:hover{
     background-color: #000;
     transition: background-color 0.5s ease,  0.5s ease;
 }
@@ -64,7 +64,39 @@ html,
       margin: 0;
       padding: 0;
     }
+#naslovKom{
+  font-size: 4vh;
+}
+#textKom{
+  font-size: 2.5vh;
+}
 .ikonice{
-  font-size: 8vh!important;
+  font-size: 6vh!important;
 }
 
+.labelSize{
+  font-size: 3.5vh;
+}
+.crveno{
+  color: rgb(255,0,0);
+}
+
+.sivo-bg{
+  background-color: rgb(235,235,235);
+}
+#licence:hover{
+  color:rgb(255,0,0);
+}
+#listaLicence li{
+  background-color:rgb(235,235,235);
+  margin:1.5vh 0vh;
+  padding:0.75vh 1vh;
+}
+
+.me{
+  font-size: 3vh!important;
+  font-family:poppins;
+}
+#vidiJos{
+  cursor: pointer;
+}
