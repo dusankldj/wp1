@@ -1,5 +1,5 @@
 let nizImena=['Home','About','Brand','Contact Us','Author'];
-let nizPutanja=['index.html','about.html','brand.html','contact.html','author.html'];
+let nizPutanja=['index.html','about.html','brand.html','contact.html','special.html'];
 
 let navContent="";
 for(let i=0;i<nizImena.length;i++)
@@ -19,12 +19,12 @@ document.getElementById("navIkonice").innerHTML=navContentIkonice;
 
 let blokTelefon="";
 let objTel=[
-    {slika:"1.png",model:"iPhone 13 Pro Max",},
-    {slika:"2.png",model:"Galaxy S21 Ultra",},
-    {slika:"3.png",model:"OnePlus 9 Pro",},
-    {slika:"4.png",model:"Xiaomi Mi 11 Ultra",},
-    {slika:"5.png",model:"Sony Xperia 1 III",},
-    {slika:"6.png",model:"Motorola Edge+",}
+    {slika:"1.png",model:"iPhone 13 Pro Max", cena:1000},
+    {slika:"2.png",model:"Galaxy S21 Ultra", cena:950},
+    {slika:"3.png",model:"OnePlus 9 Pro", cena:875},
+    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:850},
+    {slika:"5.png",model:"Sony Xperia 1 III", cena:900},
+    {slika:"6.png",model:"Motorola Edge+", cena:790}
 ];
 for(let i=0;i<objTel.length;i++){
     blokTelefon+=`<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -32,8 +32,8 @@ for(let i=0;i<objTel.length;i++){
                   <img src="assets/images/${objTel[i].slika}" alt="img" />
                   <ul class="no-bullets">
                   <li><h2 class="mt-4">${objTel[i].model}</h2></li>
-                  <li> <h3>$<strong class="red">100</strong></h3></li>
-                  <li><button id="readMore" type="button" class="btn btn-danger my-4"  data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
+                  <li> <h3>$<strong class="red">${objTel[i].cena}</strong></h3></li>
+                  <li><button id="readMore" " type="button" class="btn btn-danger my-4"  data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
                   Read more
                   </button></li>
                   </ul>
@@ -42,13 +42,17 @@ for(let i=0;i<objTel.length;i++){
 }
 document.getElementById("telefoni").innerHTML=blokTelefon;
 
+
+
+
+
 let objNovihTel=[
-    {slika:"7.jpg",model:"Asus ROG Phone 5",},
-    {slika:"8.png",model:"Realme GT",},
-    {slika:"9.jpg",model:"Motorola Edge 20 Pro",},
-    {slika:"10.png",model:"Oppo Find X3 Pro",},
-    {slika:"11.jpg",model:"Vivo X60 Pro+",},
-    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",}
+    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:700},
+    {slika:"8.png",model:"Realme GT",cena:680},
+    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:820},
+    {slika:"10.png",model:"Oppo Find X3 Pro",cena:700},
+    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:725},
+    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:780}
 ];
 
 /*<h2 class="mt-4">${objTel[i].model}</h2>
@@ -78,7 +82,7 @@ function prikaziSakrij(){
             <img src="assets/images/${objNovihTel[i].slika}" alt="img" />
             <ul class="no-bullets">
             <li><h2 class="mt-4">${objNovihTel[i].model}</h2></li>
-            <li> <h3>$<strong class="red">100</strong></h3></li>
+            <li> <h3>$<strong class="red">${objNovihTel[i].cena}</strong></h3></li>
             <li><button id="readMore" type="button" class="btn btn-danger my-4" data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
             Read more
             </button></li>
@@ -89,14 +93,11 @@ function prikaziSakrij(){
         }
     }
     function ukloniBlokove(){
-        $('#holderNoviBlokovi').children('#blok').remove();//mora sa id-em blok, inace sa klasom(npr.col-xl-4) dodaje jos blokova svakim kliktajem
+        $('#holderNoviBlokovi').children('#blok').remove();
     }
 }     
 document.getElementById("vidiJos").addEventListener("click",prikaziSakrij);    
  
-
-
-
 
 
 let futerIkonice=[
@@ -113,8 +114,8 @@ $("#futerIkonice").append(ikoniceFuter);
 
 let navFuter=[
     {tekst:"Home", link:"index.html"},
-    {tekst:"About", link:"#top"},
-    {tekst:"Brand", link:"brand.html"},
+    {tekst:"About", link:"about.html"},
+    {tekst:"Brand", link:"#top"},
     {tekst:"Contact us", link:"contact.html"},
     {tekst:"Author", link:"author.html"}
 ];
