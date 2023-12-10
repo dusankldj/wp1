@@ -14,6 +14,9 @@
     <meta name="description" content="This is form page.">
     <meta name="author" content="Dušan Đokić">
 
+    <!--plus/minus icon-->
+   
+    <!--Moj css-->
     <link rel="stylesheet" href="assets/css/mojStil.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -170,41 +173,61 @@
       </div>
 
     <!-- end contact -->
+
+    <!--faq-->
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titlepage">
+                            <h2>Frequently asked questions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+        <div class="row">
+          <div class="w-100 mx-auto">
+                <div id="accordion" class="accordion-container">
+                    <h4 class="accordion-title">What are the accepted payment methods?</h4>
+                    <div class="accordion-content">
+                        <p>We accept cash, credit/debit cards, and online bank transfers through secure platforms.</p>
+                    </div>
+                    <h4 class="accordion-title">Do you offer warranties on purchased phones?</h4>
+                    <div class="accordion-content">
+                        <p>Yes, all our phones come with a standard warranty. Please check the specific warranty terms for each model.</p>
+                    </div>
+                        <h4 class="accordion-title">Do you offer exchanges or returns for products?</h4>
+                    <div class="accordion-content">
+                        <p> If a product is faulty or doesn’t meet your expectations, we offer exchanges or refunds according to our return policy.</p>
+                    </div>
+                    <h4 class="accordion-title"> Do you perform repairs on phones not covered by warranty?</h4>
+                    <div class="accordion-content">
+                        <p>Yes, we provide servicing and repairs for phones not covered by warranty. Our team of experts will assess the device and provide repair options.</p>
+                    </div>
+                    <h4 class="accordion-title">How long does delivery take after ordering?</h4>
+                    <div class="accordion-content">
+                        <p>Delivery times vary depending on location and the delivery service used. Typically, delivery occurs within 2-5 working days from the time of ordering.</p>
+                    </div>
+                        <h4 class="accordion-title">Do you provide customer support after purchase?</h4>
+                    <div class="accordion-content">
+                        <p> Absolutely! Our customer support team is available via phone, email, and in-store to assist you with any queries or issues after your purchase.</p>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+   
+
+
     <div class="container my-5 d-none" id="agreementBlock">
         <div class="row">
           <div class="col-sm-12">
             <h2 class="crveno">Licence Agreement</h2>
             <ul id="listaLicence">
-                <li class="rounded">
-                    Product Usage: The products purchased from our store are intended for personal use only and should not be resold or used for commercial purposes without our explicit consent.
-                </li>
-                <li class="rounded">
-                    Warranty: We provide a limited warranty for the functionality of our products. Any physical damage or unauthorized modifications will void the warranty.
-                </li>
-                <li class="rounded">
-                    Software and Updates: Any software provided with the products is subject to the respective software licenses. Updates may be available and we encourage regular updates for security and performance reasons.
-                </li>
-                <li class="rounded">
-                    Privacy and Data: We respect your privacy and handle all personal data in accordance with our privacy policy. Any data collected during transactions will be used solely for the purpose of completing your purchase.
-                </li>
-                <li class="rounded">
-                    Returns and Refunds: Our store has a return and refund policy. Please refer to our policies for detailed information on returns, exchanges, and refunds.
-                </li>
-                <li class="rounded">
-                    Liability: Our liability is limited to the cost of the purchased product. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our products.
-                </li>
-                <li class="rounded">
-                    Customer Support: We strive to provide excellent customer support. For any queries or assistance, feel free to contact our support team.
-                </li>
-                <li class="rounded">
-                    Governing Law: Any disputes arising from this agreement shall be governed by the laws of the jurisdiction in which our store is located.
-                </li>
-                <li class="rounded">
-                    Modifications: We reserve the right to modify or update these terms and conditions at any time. Any changes will be effective immediately upon posting.
-                </li>
-                <li class="rounded">
-                    Acceptance: By using our products, you acknowledge that you have read and agreed to these terms and conditions.
-                </li>
+              <!--Dinamicko ispisvanje uslova koriscenja-->
             </ul>
             <div class="container d-flex justify-content-center">
                 <button id="closeLicence" type="button" class="btn mt-4 text-white" data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
@@ -257,8 +280,9 @@
         </div>
     </footer>
     <!-- end footer -->
+    <!--plug in javascript-->
+ 
     <!-- Javascript files-->
-    <script src="assets/js/kontakt.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -286,6 +310,8 @@
             });
         });
     </script>
+    <script src="/path/to/cdn/jquery.min.js"></script>
+    <script src="assets/js/kontakt.js"></script>
 </body>
 
 </html>
