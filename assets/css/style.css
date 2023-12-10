@@ -1840,7 +1840,7 @@ border-radius: 50px;
 /** brand **/
 .brand {
      padding-top: 60px;
-     border-top: #db0000 solid 6px;}
+     border-top: rgb(255,0,0) solid 6px;}
 
 .brand-bg {
      background: #ebebeb;
