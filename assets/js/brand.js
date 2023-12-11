@@ -19,21 +19,21 @@ document.getElementById("navIkonice").innerHTML=navContentIkonice;
 
 let blokTelefon="";
 let objTel=[
-    {slika:"1.png",model:"iPhone 13 Pro Max", cena:1000},
-    {slika:"2.png",model:"Galaxy S21 Ultra", cena:950},
-    {slika:"3.png",model:"OnePlus 9 Pro", cena:875},
-    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:850},
-    {slika:"5.png",model:"Sony Xperia 1 III", cena:900},
-    {slika:"6.png",model:"Motorola Edge+", cena:790}
+    {slika:"1.png",model:"iPhone 13 Pro Max", cena:1000, id:1},
+    {slika:"2.png",model:"Galaxy S21 Ultra", cena:950,id:2},
+    {slika:"3.png",model:"OnePlus 9 Pro", cena:875,id:3},
+    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:850,id:4},
+    {slika:"5.png",model:"Sony Xperia 1 III", cena:900,id:5},
+    {slika:"6.png",model:"Motorola Edge+", cena:790,id:6}
 ];
 for(let i=0;i<objTel.length;i++){
     blokTelefon+=`<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                  <div class="brand_box rounded">
+                  <div class="brand_box rounded font">
                   <img src="assets/images/${objTel[i].slika}" alt="img" />
                   <ul class="no-bullets">
                   <li><h2 class="mt-4">${objTel[i].model}</h2></li>
                   <li> <h3>$<strong class="red">${objTel[i].cena}</strong></h3></li>
-                  <li><button id="readMore" " type="button" class="btn btn-danger my-4"  data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
+                  <li><button data-id="${objTel[i].id}" type="button" class="readMore btn crveno-bg my-4"  data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
                   Read more
                   </button></li>
                   </ul>
@@ -47,12 +47,12 @@ document.getElementById("telefoni").innerHTML=blokTelefon;
 
 
 let objNovihTel=[
-    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:700},
-    {slika:"8.png",model:"Realme GT",cena:680},
-    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:820},
-    {slika:"10.png",model:"Oppo Find X3 Pro",cena:700},
-    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:725},
-    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:780}
+    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:700,id:7},
+    {slika:"8.png",model:"Realme GT",cena:680,id:8},
+    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:820,id:9},
+    {slika:"10.png",model:"Oppo Find X3 Pro",cena:700,id:10},
+    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:725,id:11},
+    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:780,id:12}
 ];
 
 /*<h2 class="mt-4">${objTel[i].model}</h2>
@@ -83,13 +83,14 @@ function prikaziSakrij(){
             <ul class="no-bullets">
             <li><h2 class="mt-4">${objNovihTel[i].model}</h2></li>
             <li> <h3>$<strong class="red">${objNovihTel[i].cena}</strong></h3></li>
-            <li><button id="readMore" type="button" class="btn btn-danger my-4" data-bs-toggle="modal" data-bs-target="#iskacuciProzor">
+            <li><button type="button" class="readMore btn crveno-bg my-4" data-bs-toggle="modal" data-id="${objNovihTel[i].id}" data-bs-target="#iskacuciProzor">
             Read more
             </button></li>
             </ul>
             </div>
             </div>`;
             $('#holderNoviBlokovi').append(noviBlok);
+            dodajEventove();
         }
     }
     function ukloniBlokove(){
@@ -98,6 +99,80 @@ function prikaziSakrij(){
 }     
 document.getElementById("vidiJos").addEventListener("click",prikaziSakrij);    
  
+//objekat modala sa informacijama
+var objModala=[
+    {slika:"1.png",model:"iPhone 13 Pro Max", cena:"1000$", ram:"16GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"2.png",model:"Galaxy S21 Ultra", cena:"950$", ram:"12GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"3.png",model:"OnePlus 9 Pro", cena:"875$", ram:"24GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:"850$", ram:"32GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"5.png",model:"Sony Xperia 1 III", cena:"900$", ram:"8GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"6.png",model:"Motorola Edge+", cena:"790$", ram:"10GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:"700$",id:7,ram:"16GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"8.png",model:"Realme GT",cena:"680$",id:8,ram:"10GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:"820$",id:9,ram:"6GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"10.png",model:"Oppo Find X3 Pro",cena:"700$",id:10,ram:"14GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:"725$",id:11,ram:"30GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:"780$",id:12,ram:"22GB",cpu:"snapdragon",baterry:"5000mAh"}
+];
+
+function prikaziModal(){
+    var id = $(this).data("id")
+    var trenutniObjekat = null;
+    for(var i = 0;i<objTel.length;i++){
+        if(objTel[i].id == id){
+            trenutniObjekat = objTel[i];
+            break;
+        }
+    }
+    if(!trenutniObjekat){
+        for(var i = 0;i<objNovihTel.length;i++){
+            if(objNovihTel[i].id==id){
+                trenutniObjekat = objNovihTel[i];
+                break;
+            }
+        }
+    }
+    //ispisujes sve iz trenutnog objekta
+    var ispis=`
+    <div class="modal-dialog" role="document">
+      <div class="modal-content col text-center">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="mojModalLabel">${objModala[i].model}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Zatvori">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <img src="assets/images/${objModala[i].slika}" alt="image"/>
+        <p class="text-dark pt-4">Price: <span class="crveno">${objModala[i].cena}</span></p>
+        <ul class="text-dark">
+            <li>RAM: <span class="crveno">${objModala[i].ram}</span></li>
+            <li>CPU: <span class="crveno">${objModala[i].cpu}</span></li>
+            <li>Baterry: <span class="crveno">${objModala[i].baterry}</span></li>
+        </ul>
+        </div>
+        <div class="modal-footer justify-content-right">
+          
+          <button type="button" class="bg-dark btn btn-primary text-white border-0" data-dismiss="modal">Izlaz</button>
+        </div>
+      </div>
+    </div>
+
+    `;
+document.getElementById("modalHolder").innerHTML=ispis;
+$("#modalHolder").modal("show");
+     
+}
+function dodajEventove(){
+    var buttons = document.getElementsByClassName("readMore");
+    for(var i = 0;i<buttons.length;i++){
+        buttons[i].addEventListener("click", prikaziModal);
+    }
+}
+dodajEventove();
+
+
+
 
 
 let futerIkonice=[
