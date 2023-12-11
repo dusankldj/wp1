@@ -34,7 +34,7 @@
   #readMore:hover::before {
     width: 100%;
   }*/
-#readMore,#closeLicence{
+#readMore, #closeLicence{
     background-color: rgb(255,0,0);
     color:#FFFF;
     transition: background-color 0.5s ease,  0.5s ease;
@@ -79,10 +79,19 @@ html,
 .labelSize{
   font-size: 3.5vh;
 }
+
 .crveno{
   color: rgb(255,0,0);
+  transition:0.5s ease-in-out;
 }
-
+.crveno-bg{
+  background-color: rgb(255,0,0);
+  color:#fff;
+  font-family: poppins;
+}
+.crveno-bg:hover{
+  background-color: #000;
+}
 .sivo-bg{
   background-color: rgb(235,235,235);
 }
