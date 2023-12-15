@@ -18,12 +18,12 @@ document.getElementById("navIkonice").innerHTML=navContentIkonice;
 
 let blokTelefon="";
 let objTel=[
-    {slika:"1.png",model:"iPhone 13 Pro Max", cena:1000, id:1},
-    {slika:"2.png",model:"Galaxy S21 Ultra", cena:950,id:2},
-    {slika:"3.png",model:"OnePlus 9 Pro", cena:875,id:3},
-    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:850,id:4},
-    {slika:"5.png",model:"Sony Xperia 1 III", cena:900,id:5},
-    {slika:"6.png",model:"Motorola Edge+", cena:790,id:6}
+    {slika:"1.png",model:"iPhone 13 Pro Max", cena:"1000$", id:1, ram:"16GB",cpu:"snapdragon",baterry:"5000mAh"},
+    {slika:"2.png",model:"Galaxy S21 Ultra", cena:"950$",id:2, ram:"12GB",cpu:"snapdragon",baterry:"4500mAh"},
+    {slika:"3.png",model:"OnePlus 9 Pro", cena:"875$",id:3, ram:"8GB",cpu:"snapdragon",baterry:"3000mAh"},
+    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:"850$",id:4, ram:"24GB",cpu:"snapdragon",baterry:"5500mAh"},
+    {slika:"5.png",model:"Sony Xperia 1 III", cena:"900$",id:5, ram:"6GB",cpu:"snapdragon",baterry:"4200mAh"},
+    {slika:"6.png",model:"Motorola Edge+", cena:"790$",id:6, ram:"8GB",cpu:"snapdragon",baterry:"5000mAh"}
 ];
 for(let i=0;i<objTel.length;i++){
     blokTelefon+=`<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -45,13 +45,14 @@ document.getElementById("telefoni").innerHTML=blokTelefon;
 
 
 
+
 let objNovihTel=[
-    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:700,id:7},
-    {slika:"8.png",model:"Realme GT",cena:680,id:8},
-    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:820,id:9},
-    {slika:"10.png",model:"Oppo Find X3 Pro",cena:700,id:10},
-    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:725,id:11},
-    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:780,id:12}
+    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:"700$",id:7, ram:"11GB",cpu:"snapdragon",baterry:"4700mAh"},
+    {slika:"8.png",model:"Realme GT",cena:"680$",id:8, ram:"7GB",cpu:"snapdragon",baterry:"3700mAh"},
+    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:"820$",id:9, ram:"21GB",cpu:"snapdragon",baterry:"6000mAh"},
+    {slika:"10.png",model:"Oppo Find X3 Pro",cena:"700$",id:10, ram:"31GB",cpu:"snapdragon",baterry:"5200mAh"},
+    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:"725$",id:11, ram:"5GB",cpu:"snapdragon",baterry:"4150mAh"},
+    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:"780$",id:12, ram:"9GB",cpu:"snapdragon",baterry:"4700mAh"}
 ];
 
 /*<h2 class="mt-4">${objTel[i].model}</h2>
@@ -98,21 +99,6 @@ function prikaziSakrij(){
 }     
 document.getElementById("vidiJos").addEventListener("click",prikaziSakrij);    
  
-//objekat modala sa informacijama
-var objModala=[
-    {slika:"1.png",model:"iPhone 13 Pro Max", cena:"1000$", ram:"16GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"2.png",model:"Galaxy S21 Ultra", cena:"950$", ram:"12GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"3.png",model:"OnePlus 9 Pro", cena:"875$", ram:"24GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"4.png",model:"Xiaomi Mi 11 Ultra", cena:"850$", ram:"32GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"5.png",model:"Sony Xperia 1 III", cena:"900$", ram:"8GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"6.png",model:"Motorola Edge+", cena:"790$", ram:"10GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"7.jpg",model:"Asus ROG Phone 5",cena:"700$",id:7,ram:"16GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"8.png",model:"Realme GT",cena:"680$",id:8,ram:"10GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"9.jpg",model:"Motorola Edge 20 Pro",cena:"820$",id:9,ram:"6GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"10.png",model:"Oppo Find X3 Pro",cena:"700$",id:10,ram:"14GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"11.jpg",model:"Vivo X60 Pro+",cena:"725$",id:11,ram:"30GB",cpu:"snapdragon",baterry:"5000mAh"},
-    {slika:"12.jpg",model:"Lenovo Legion Phone Duel 2",cena:"780$",id:12,ram:"22GB",cpu:"snapdragon",baterry:"5000mAh"}
-];
 
 function prikaziModal(){
     var id = $(this).data("id")
@@ -136,18 +122,18 @@ function prikaziModal(){
     <div class="modal-dialog" role="document">
       <div class="modal-content col text-center">
         <div class="modal-header">
-          <h5 class="modal-title text-dark" id="mojModalLabel">${objModala[i].model}</h5>
+          <h5 class="modal-title text-dark" id="mojModalLabel">${trenutniObjekat.model}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Zatvori">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-        <img src="assets/images/${objModala[i].slika}" alt="image"/>
-        <p class="text-dark pt-4">Price: <span class="crveno">${objModala[i].cena}</span></p>
+        <img src="assets/images/${trenutniObjekat.slika}" alt="image"/>
+        <p class="text-dark pt-4">Price: <span class="crveno">${trenutniObjekat.cena}</span></p>
         <ul class="text-dark">
-            <li>RAM: <span class="crveno">${objModala[i].ram}</span></li>
-            <li>CPU: <span class="crveno">${objModala[i].cpu}</span></li>
-            <li>Baterry: <span class="crveno">${objModala[i].baterry}</span></li>
+            <li>RAM: <span class="crveno">${trenutniObjekat.ram}</span></li>
+            <li>CPU: <span class="crveno">${trenutniObjekat.cpu}</span></li>
+            <li>Baterry: <span class="crveno">${trenutniObjekat.baterry}</span></li>
         </ul>
         </div>
         <div class="modal-footer justify-content-right">
